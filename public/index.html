@@ -1,11 +1,110 @@
 <html>
   <head>
-    <title>Your Generated Front-end</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>discospot</title>
+    <!-- <link rel="stylesheet" href="/stylesheets/style.css" /> -->
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <h1>Express + ES6 Imports</h1>
-    <p>Welcome to the future 🔮</p>
+    <!-- Modal -->
+
+    <div
+      class="modal fade"
+      id="getARecordModal"
+      tabindex="-1"
+      aria-labelledby="getARecordModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="getARecordModalLabel">Get a Record!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-loader">
+            <div
+              style="
+                width: 100%;
+                height: 0;
+                padding-bottom: 57%;
+                position: relative;
+              "
+            >
+              <iframe
+                src="https://giphy.com/embed/B9O4oVqGjOBFu"
+                width="100%"
+                height="100%"
+                style="position: absolute"
+                frameborder="0"
+                class="giphy-embed"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p>
+              <a
+                href="https://giphy.com/gifs/beavis-and-butthead-rock-on-ac-dc-t-shirt-B9O4oVqGjOBFu"
+                >via GIPHY</a
+              >
+            </p>
+          </div>
+          <div class="modal-body" id="records-for-sale"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-dark"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <!-- <button type="button" class="btn btn-light">Go to Discogs!</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="collection">
+      <h1>discospot</h1>
+      <p>linking discogs and spotify to find albums on the market</p>
+      <a href="/api/spot/login" class="btn btn-dark btn-lg" role="button"
+        >LOGIN</a
+      >
+      <a href="/api/spot" class="btn btn-dark btn-lg" role="button"
+        >SPOT-DATA</a
+      >
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-dark btn-lg"
+        data-bs-toggle="modal"
+        data-bs-target="#getARecordModal"
+      >
+        GET A RECORD!
+      </button>
+      <hr />
+      <!-- <a href="./sale.html" class="btn btn-dark btn-lg" role="button"
+        >GET A RECORD</a
+      > -->
+
+      <div class="d-flex flex-wrap" id="records-list"></div>
+    </div>
+
+    <script src="./js/main.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
